@@ -1,2 +1,3 @@
 # bookbot
-book static analysis using python
+
+Bookbot is my first git project!
