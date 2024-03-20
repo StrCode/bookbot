@@ -3,8 +3,8 @@ def main():
     file_contents = read_text_file(file_url)
     text_count = text_counter(file_contents)
     reports = count_letters(file_contents)
-    print(f"--- Begin report of {file_url} --- \n")
-    print(f"{text_count} words found in the document")
+    print(f"--- Begin report of {file_url} ---")
+    print(f"{text_count} words found in the document\n")
     for r in reports:
         print(f"The '{list(r.keys())[0]}' character was found {list(r.values())[0]} times")
     print(f"\n --- End report ---")  
