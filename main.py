@@ -6,8 +6,10 @@ def main():
     print(f"--- Begin report of {file_url} ---")
     print(f"{text_count} words found in the document\n")
     for r in reports:
-        print(f"The '{list(r.keys())[0]}' character was found {list(r.values())[0]} times")
-    print(f"\n --- End report ---")  
+        print(
+            f"The '{list(r.keys())[0]}' character was found"
+            "{list(r.values())[0]} times")
+    print("\n --- End report ---")
 
 
 def read_text_file(file_url):
@@ -25,6 +27,8 @@ def text_counter(text):
 
 # A function that takes a dictionary and returns the value of the "num" key
 # This is how the `.sort()` method knows how to sort the list of dictionaries
+
+
 def sort_on(dict):
     return list(dict.values())[0]
 
@@ -40,5 +44,6 @@ def count_letters(text):
     result_list = [{key: value} for key, value in counter.items()]
     result_list.sort(reverse=True, key=sort_on)
     return result_list
+
 
 main()
